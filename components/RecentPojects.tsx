@@ -3,81 +3,52 @@ import React from 'react'
 import { FaLocationArrow } from 'react-icons/fa6'
 import { PinContainer } from './ui/Pin'
 
-const RecentPojects = () => {
+const RecentProjects = () => {
   return (
-    <section id="projects">
-     <div className="py-20">
-      <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
-      </h1>
-      <div className="flex flex-row items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
-          <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-            key={item.id}
-          >
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
-              </div>
-
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
-              </h1>
-
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
-                {item.des}
-              </p>
-
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
+    <section id="projects" className="bg-transparent py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          A small selection of <span className="text-purple-600">recent projects</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((item) => (
+            <div key={item.id} className="flex justify-center mt-10 mb-32">
+              <PinContainer title={item.title} href={item.link}>
+                <div className="bg-transparent rounded-lg shadow-lg overflow-hidden h-full">
+                  <div className="relative h-48 md:h-56 lg:h-64">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-xl mb-2 truncate">{item.title}</h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">{item.des}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex -space-x-2">
+                        {item.iconLists.map((icon, index) => (
+                          <img
+                            key={index}
+                            src={icon}
+                            alt={`Technology ${index + 1}`}
+                            className="w-8 h-8 rounded-full border-2 border-white"
+                          />
+                        ))}
+                      </div>
+                      <a
+                        href={item.link}
+                        className="flex items-center text-purple-600 hover:text-purple-700 transition-colors"
+                      >
+                        <span className="text-sm font-medium mr-2">View Project</span>
+                        <FaLocationArrow size={14} />
+                      </a>
                     </div>
-                  ))}
+                  </div>
                 </div>
-
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
-              </div>
-            </PinContainer>
-          </div>
-        ))}
+              </PinContainer>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </section>
   )
 }
 
-export default RecentPojects  
+export default RecentProjects
