@@ -1,3 +1,4 @@
+// data/index.ts
 export const navItems = [
   {name: "Home", link: "#hero"},
   { name: "About", link: "#about" },

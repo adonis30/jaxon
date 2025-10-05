@@ -1,25 +1,58 @@
-import About from "@/components/About";
-import Grid from "@/components/Grid";
+"use client";
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import RecentPojects from "@/components/RecentPojects";
-import { FloatingNav } from "@/components/ui/FloatingNav";
-import { navItems } from "@/data";
+import About from "@/components/About";
 
 
-export default function Home() {
+import { motion } from "framer-motion";
+import BoardOfDirectors from "@/components/BoardOfDirectors";
+import Contact from "@/components/Contact";
+import CoreValues from "@/components/CoreValues";
+import Footer from "@/components/Footer";
+import OtherClients from "@/components/OtherClients";
+import Projects from "@/components/Pojects";
+import Testimonials from "@/components/Testimonials";
+import { i } from "framer-motion/client";
+
+export default function HomePage() {
   return (
-    <>
-    <Header />
-   <main className=" relative bg-black-100 flex jsutify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-    <div className="max-w-7xl w-full">
-      <FloatingNav navItems={navItems} />
-      <Hero />
-      <Grid />
-      <About />
-      <RecentPojects />
-    </div>
-   </main>
-   </> 
+    <main className="bg-white text-gray-900">
+      <Header />
+
+      <motion.div id="hero" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+        <Hero />
+      </motion.div>
+
+      <motion.div id="about" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+        <About />
+      </motion.div>
+
+      <motion.div id="values" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
+        <CoreValues />
+      </motion.div>
+
+      <motion.div id="team" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }}>
+        <BoardOfDirectors />
+      </motion.div>
+
+      <motion.div id="projects" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.6 }}>
+        <Projects />
+      </motion.div>
+
+      <motion.div id="testimonials" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.8 }}>
+        <Testimonials />
+      </motion.div>
+
+      <motion.div id="clients" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 1 }}>
+        <OtherClients />
+      </motion.div>
+
+      <motion.div id="contact" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 1.2 }}>
+        <Contact />
+      </motion.div>
+
+      <Footer />
+    </main>
   );
 }
