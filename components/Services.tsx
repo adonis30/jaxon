@@ -53,7 +53,7 @@ export default function Services() {
               className="bg-gray-800 rounded-xl p-6 text-left shadow-lg hover:shadow-xl transition"
             >
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-gold text-xl font-semibold mb-2">
                 {service.title}
               </h3>
               <p className="text-gray-300">{service.description}</p>
