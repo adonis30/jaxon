@@ -15,7 +15,7 @@ import {
 const gallery = [
   {
     image: images12,
-    title: "Storage server at ZAMFA Headquarters Luanshya",
+    title: "Storage server at ZAMEFA Headquarters Luanshya",
     desc: "High-resolution surveillance network with remote monitoring integration.",
   },
   {
