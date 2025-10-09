@@ -20,7 +20,7 @@ const gallery = [
   },
   {
     image: image13,
-    title: "Monitoring System at - ZAMFA Headquarters Luanshya",
+    title: "Monitoring System at - ZAMEFA Headquarters Luanshya",
     desc: "Biometric access system with centralized employee management.",
   },
   {
