@@ -2,21 +2,21 @@ import Image from "next/image";
 
 const directors = [
   {
-    name: "Arthur Kasamba",
-    role: "CEO",
+    name: "Onisy Chirwa Ndhlovu",
+    role: "Head Technician",
     bio: "Visionary leader driving innovation, strategy, and business growth.",
     image: "/images/team/arthur.jpg",
   },
   {
-    name: "Jackson Malasha",
-    role: "Operations Director",
+    name: "Augustine Chirwa",
+    role: "Technician",
     bio: "Ensures smooth day-to-day operations and efficient service delivery.",
     image: "/images/team/jackson.jpg",
   },
   {
-    name: "Mwape Mambwe",
-    role: "Finance Manager",
-    bio: "Handles financial planning and ensures sustainable business growth.",
+    name: "Andrew Mwiksa",
+    role: "Technician",
+    bio: "Handles installation planning and ensures sustainable business growth.",
     image: "/images/team/mwape.jpg",
   },
   {

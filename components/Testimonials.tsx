@@ -1,30 +1,35 @@
 const testimonials = [
   {
     quote:
-      "We've been working with Jaxon Investments for over a year now, and the team has consistently provided excellent service.",
-    client: "Mortus Car Rental",
+      "Jaxon Security Systems installed our CCTV and access control with precision and professionalism. The clarity and reliability are unmatched.",
+    client: "Ndola School of Nursing",
   },
   {
     quote:
-      "Jaxon Investments has proven to be a reliable partner. Their commitment to excellence and customer satisfaction is evident in every interaction.",
-    client: "YLEM Network",
+      "We rely on Jaxon for all our surveillance and alarm systems. Their after-sales service and technical support are excellent.",
+    client: "AAA Ventures",
+  },
+  {
+    quote:
+      "Their smart home integration transformed our estate security. We can monitor and control everything from our phones.",
+    client: "Mr Reuben Mpando",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-16 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-900">
-          Client Feedback
+    <section id="testimonials" className="py-20 bg-gray-900 text-gray-50">
+      <div className="max-w-5xl mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gold">
+          What Our Clients Say
         </h2>
-        <div className="space-y-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white p-6 rounded-xl shadow-lg">
-              {/* Use curly braces to include quotes */}
-              <p className="text-gray-700 italic mb-4">
-                {`"${t.quote}"`}
-              </p>
+            <div
+              key={i}
+              className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            >
+              <p className="italic text-gray-300 mb-4">&ldquo;{t.quote}&rdquo;</p>
               <p className="font-semibold text-gold">{t.client}</p>
             </div>
           ))}

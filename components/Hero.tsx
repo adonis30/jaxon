@@ -1,36 +1,34 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative bg-white text-gray-900">
-      <div className="max-w-7xl mx-auto px-6 py-32 text-center md:text-left">
-        <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
-        >
-          Experience Excellence with Jaxon Investments
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-lg md:text-xl mb-8 text-gray-700"
-        >
-          Your trusted partner in hardware, construction, procurement, and logistics in Zambia
-        </motion.p>
-        <motion.a
-          href="#contact"
-          whileHover={{ scale: 1.05 }}
-          className="inline-block bg-gold text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-600 transition-colors"
-        >
-          Get a Quote
-        </motion.a>
+    <section className="relative bg-gray-900 text-white py-24 overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/security-bg.jpg"
+          alt="Security systems background"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-white to-gold opacity-10 pointer-events-none"></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+          Protecting What Matters Most
+        </h1>
+        <p className="text-lg md:text-xl text-gray-200 mb-8">
+          Trusted experts in CCTV, alarm systems, and access control solutions
+          across Zambia.
+        </p>
+        <Link
+          href="#services"
+          className="bg-gold text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition"
+        >
+          Explore Our Solutions
+        </Link>
+      </div>
     </section>
   );
 }

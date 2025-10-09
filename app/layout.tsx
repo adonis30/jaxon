@@ -3,9 +3,9 @@ import "./globals.css";
 import { ThemeProvider } from "./provider";
 
 export const metadata: Metadata = {
-  title: "Jaxon Investments",
+  title: "Jaxon Security Systems | Trusted Surveillance & Safety Solutions",
   description:
-    "building with you, For Your Domestic and Industrial Power Tools, Hardware, Building Materials, Cement, Rhino Plasters And Boards Plumbing, Agricultural Inputs Irrigation Inputs And Electrical Supplies",
+    "Jaxon Security Systems provides trusted CCTV, alarm, and access control solutions for homes, businesses, and industries across Zambia.",
 };
 
 export default function RootLayout({
